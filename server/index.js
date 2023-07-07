@@ -1,6 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import { db } from './db/firebase.js';
+
 dotenv.config();
 
 const app = express();
@@ -8,11 +8,6 @@ const app = express();
 app.get("/", (req, res) => {
     res.send("testing");
 })
-
-const data = {
-    name: "testing",
-    age : 12
-}
 
 
 
