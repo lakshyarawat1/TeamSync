@@ -5,3 +5,7 @@
 :root{
     font-family: 'Poppins', sans-serif;
 }
+
+.bg-primary{
+    background-color: #541554;
+}
