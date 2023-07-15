@@ -1,11 +1,13 @@
 import { FcGoogle } from 'react-icons/fc'
 import { signUp } from '../firebase/firebase';
+import axios from 'axios';
 
 const Hero = () => {
 
   const handleSignUpClick = async () => {
     const res = await signUp();
     console.log(res);
+    axios.post('/api/user/update');
   }
   return (
     <div className="flex bg-primary">
