@@ -36,6 +36,23 @@ const CreateAWorkSpace = () => {
           <img src="work.svg" className="w-2/3 mx-auto" alt="banner" />
         </div>
       </div>
+      <div className="bg-white p-7 text-black absolute rounded-full -mt-10 left-[40%] md:left-[45%]">
+        OR
+      </div>
+      <div className="bg-white w-full">
+        <div className="text-black font-bold py-10 text-center">
+          Open a workspace
+        </div>
+        <div className="card ">
+          <div className="card-body">
+            <h2 className="card-title">Work Spaces For __EMAIL__</h2>
+            <p>How to park your car at your garage?</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-link normal-case">Learn now!</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
