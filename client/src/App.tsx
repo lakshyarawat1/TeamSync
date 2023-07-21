@@ -5,10 +5,10 @@ import Workspaces from "./components/Workspaces";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UserContextProvider } from "./context/UserContext";
 import axios from "axios";
+import Footer from "./components/Footer";
 
 function App() {
-
-  axios.defaults.baseURL = 'http://localhost:8000';
+  axios.defaults.baseURL = "http://localhost:8000";
   axios.defaults.withCredentials = true;
 
   return (
@@ -21,12 +21,21 @@ function App() {
             element={
               <>
                 <Hero />
+              </>
+            }
+          />
+          <Route
+            path="/user"
+            element={
+              <>
+                <Hero />
                 <Workspaces />
               </>
             }
           />
           <Route path="/create-a-workspace/" element={<CreateAWorkSpace />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </UserContextProvider>
   );

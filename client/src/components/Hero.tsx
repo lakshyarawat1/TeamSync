@@ -7,7 +7,7 @@ const Hero = () => {
   const handleSignUpClick = async () => {
     const res = await signUp();
     console.log(res);
-    axios.post('/api/user/update');
+    axios.post('/api/user/update'); 
   }
   return (
     <div className="flex bg-primary">
@@ -22,7 +22,10 @@ const Hero = () => {
               </div>
               <div>
           <button onClick={() => handleSignUpClick()} className="bg-white flex gap-5 items-center p-2 rounded-lg hover:bg-slate-100 mt-5"><FcGoogle className="md:text-xl text-4xl" />Sign In With Google</button>
-              </div>
+        </div>
+        <div className='text-white mt-6 font-bold'>
+          Team Sync is free to try for as long as you want. No credit card
+        </div>
       </div>
       <div className="flex-2 w-1/3">
         <img
