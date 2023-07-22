@@ -46,9 +46,15 @@ const CreateAWorkSpace = () => {
         <div className="card ">
           <div className="card-body">
             <h2 className="card-title">Work Spaces For __EMAIL__</h2>
-            <p>How to park your car at your garage?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-link normal-case">Learn now!</button>
+
+            <div className="flex gap-10 hover:scale-105 justify-center items-center my-4 py-6 shadow-2xl rounded-lg px-10">
+              <img src="vite.svg" className="w-10 h-10" />
+              <p className="">Vite</p>
+              <div className="md:block hidden card-actions justify-end">
+                <button className="btn btn-primary normal-case">
+                  Learn now!
+                </button>
+              </div>
             </div>
           </div>
         </div>
