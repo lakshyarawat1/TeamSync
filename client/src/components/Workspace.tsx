@@ -1,13 +1,19 @@
-import Sidebar from "./workspace/Sidebar"
+import Sidebar from "./workspace/Sidebar";
+import Navbar from "./workspace/Navbar";
+import Chat from "./workspace/Chat";
 
 const Workspace = () => {
-    return (
-        <>
-            <div>
-                <Sidebar />
-            </div>
-        </>
-  )
-}
+  return (
+    <>
+      <div>
+        <Navbar />
+        <div className="flex gap-2">
+          <Sidebar />
+          <Chat />
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Workspace
+export default Workspace;

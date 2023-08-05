@@ -50,12 +50,16 @@ const Footer = () => {
           </svg>
         </a>
       </div>
+
       <div className="">
         <p>
           Developed by @LakshyaRawat,{" "}
-          <a href="https://github.com/lakshyarawat1/TeamSync" className="link link-hover">
+          <a
+            href="https://github.com/lakshyarawat1/TeamSync"
+            className="link link-hover"
+          >
             Give this project a star *
-          </a>{" "} 
+          </a>{" "}
         </p>
       </div>
     </footer>

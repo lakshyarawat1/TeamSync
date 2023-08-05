@@ -1,42 +1,20 @@
-import { sideItems } from "../../constants/sideItems";
+import { BiSolidEditAlt } from "react-icons/bi";
+import { AiFillCaretDown, AiFillFile } from "react-icons/ai";
+import { FaConnectdevelop } from "react-icons/fa";
+import { BsFiles, BsHash, BsPlus } from "react-icons/bs";
+import { IoOptionsOutline } from "react-icons/io5";
+import { Button } from "./Button";
 
 const Sidebar = () => {
   return (
-    <>
-      <div className="dropdown dropdown-bottom w-1/5 border-y border-[#4e4e4e]">
+    <div className="w-1/5 h-full">
+      <div className="dropdown dropdown-bottom border-y border-[#4e4e4e] w-full">
         <label tabIndex={0} className="btn w-full h-[60px]">
-          <div className="text-xl normal-case flex gap-4 pt-2">
+          <div className="text-lg normal-case flex gap-4">
             TeamSync
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-4 h-4 mt-1"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"
-              />
-            </svg>
-            <div className="ml-8 opacity-80 bg-white text-black p-2 hover:bg-black hover:text-white rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
-                />
-              </svg>
-            </div>
+            <Button theme="dark" size="xxl">
+              <BiSolidEditAlt />
+            </Button>
           </div>
         </label>
         <ul
@@ -46,22 +24,79 @@ const Sidebar = () => {
           <li>Item 1</li>
         </ul>
       </div>
-      <div className="py-4 bg-[#19171d] w-1/5">
-        {sideItems.map((item, key) => (
-          <div className="" key={key}>
-            <div className="flex gap-3 text-md py-1">
-              <img
-                src={item.icon}
-                className="h-10 w-10 text-[#434343] p-2 rounded-full"
-              />
-              <a href={item.path} className="pt-2">
-                <span>{item.name}</span>
-              </a>
-            </div>
-          </div>
-        ))}
+      <div className="py-4 bg-[#19171d]">
+        <div className="flex gap-5 mx-10 my-3 text-md">
+          <Button size="medium" theme="dark">
+            <AiFillFile />
+          </Button>
+          <span>Canvases</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-3 text-md">
+          <Button size="medium" theme="dark">
+            <FaConnectdevelop />
+          </Button>
+          <span>Connect</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-3 text-md">
+          <Button size="medium" theme="dark">
+            <BsFiles />
+          </Button>
+          <span>Files</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-3 text-sm">
+          <Button size="medium" theme="dark">
+            <IoOptionsOutline />
+          </Button>
+          <span>Browse TeamSync</span>
+        </div>
+        <div className="flex gap-5 mx-10 mt-6 text-md">
+          <Button size="medium" theme="dark">
+            <AiFillCaretDown />
+          </Button>
+          <span>Channels</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-3 text-md">
+          <Button size="medium" theme="dark">
+            <BsHash />
+          </Button>
+          <span>general</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-3 text-md">
+          <Button size="medium" theme="dark">
+            <BsHash />
+          </Button>
+          <span>random</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-3 text-md">
+          <Button size="medium" theme="dark">
+            <BsHash />
+          </Button>
+          <span>practice</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-3 text-md">
+          <Button size="medium" theme="dark">
+            <BsPlus className="bg-slate-800" />
+          </Button>
+          <span>Add channels</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-3 text-md">
+          <Button size="medium" theme="dark">
+            <AiFillCaretDown />
+          </Button>
+          <span>Direct Messages</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-3 text-md">
+          <img src="vite.svg" className="h-4 w-4" />
+          <span>User [You]</span>
+        </div>
+        <div className="flex gap-5 mx-10 my-4 text-md">
+          <Button size="medium" theme="dark">
+            <BsPlus className="bg-slate-800" />
+          </Button>
+          <span>Add colleagues</span>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
