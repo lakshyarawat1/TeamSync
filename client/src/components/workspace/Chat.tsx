@@ -1,10 +1,12 @@
 import { AiFillCaretDown } from "react-icons/ai";
 import { Button } from "./Button";
 import { BiPlus, BiSolidContact } from "react-icons/bi";
+import TextArea from "./TextArea";
+import Message from "./Message";
 
 const Chat = () => {
   return (
-    <div className="w-4/5">
+    <div className="w-4/5 absolute left-[20%]">
       <div className="border border-[#5a5a5a] p-2 grid grid-cols-12">
         <div className="col-span-10">
           <div className="btn normal-case">
@@ -25,7 +27,7 @@ const Chat = () => {
           &nbsp; Add a bookmark
         </div>
       </div>
-      <div className="p-10">
+      <div className="p-10  overflow-auto h-[300px]">
         <div className="text-4xl font-black">
           Welcome to the channel # practice
         </div>
@@ -40,17 +42,23 @@ const Chat = () => {
           </Button>
           <div className="text-xs">Add people</div>
         </div>
-      </div>
-      <div className="relative">
-        <div className="absolute -top-4 bg-work right-[45%] border rounded-full w-48 text-sm py-1 px-8">
-          Friday, 21 July{" "}
-          <Button size="small" className="">
-            <AiFillCaretDown />
-          </Button>
-        </div>
 
-        <hr />
+        <Message />
+        <Message />
+        <br />
+        <div className="relative">
+          <div className="absolute -top-4 bg-work right-[45%] border rounded-full w-48 text-sm py-1 px-8">
+            Friday, 21 July{" "}
+            <Button size="small" className="">
+              <AiFillCaretDown />
+            </Button>
+          </div>
+
+          <hr />
+        </div>
       </div>
+
+      <TextArea />
     </div>
   );
 };

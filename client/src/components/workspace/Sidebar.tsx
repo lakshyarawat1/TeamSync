@@ -7,7 +7,7 @@ import { Button } from "./Button";
 
 const Sidebar = () => {
   return (
-    <div className="w-1/5 h-full">
+    <div className="w-1/5 h-full fixed">
       <div className="dropdown dropdown-bottom border-y border-[#4e4e4e] w-full">
         <label tabIndex={0} className="btn w-full h-[60px]">
           <div className="text-lg normal-case flex gap-4">
