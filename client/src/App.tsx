@@ -3,17 +3,18 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Workspaces from "./components/Workspaces";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { UserContextProvider } from "./context/UserContext";
+import { UserContext, UserContextProvider } from "./context/UserContext";
 import axios from "axios";
 import Footer from "./components/Footer";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Workspace from "./components/Workspace";
 
 function App() {
   axios.defaults.baseURL = "http://localhost:8000";
   axios.defaults.withCredentials = true;
 
-  const [workspace, setWorkspace] = useState(true);
+  const [workspace, setWorkspace] = useState(false);
+  const { currentUser } = useContext(UserContext);
 
   return (
     <UserContextProvider>

@@ -12,23 +12,5 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig)
-const provider = new GoogleAuthProvider();
-const auth = getAuth();
-export async function signUp() {
-    const res = await signInWithPopup(auth, provider)
-        .then((result) => {
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential?.accessToken;
-            const user = result.user;
-            const res = { credential, token, user };
-            return res;
-        })
-        .catch(err => {
-            const errCode = err.code;
-            const errMessage = err.message;
-            const email = err.customData.email;
-            const res = { errCode, errMessage, email };
-            return res;
-        });
-    return res;
-}
+export const provider = new GoogleAuthProvider();
+export const auth = getAuth();
